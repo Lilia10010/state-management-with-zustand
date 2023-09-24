@@ -2,14 +2,14 @@
   "name": "state-managent",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Lilia10010/state-management-with-zustand.git",
+  "homepage": "https://github.com/Lilia10010/state-management-with-zustand",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "next build",
+    "deploy": "gh-pages -d .next"
   },
   "dependencies": {
     "@types/node": "20.6.5",
