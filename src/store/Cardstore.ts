@@ -8,7 +8,7 @@ const initialItems = [
   { id: 5, name: "Item 5", price: 50 },
 ];
 
-interface Item {
+export interface Item {
   id: number;
   name: string;
   price: number;
