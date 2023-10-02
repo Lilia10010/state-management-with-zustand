@@ -25,9 +25,26 @@ export const useCartStore = create<CartStore>((set) => {
   return {
     cart: [],
     availableItems: initialItems,
-    addToCart: (item: Item) =>
-      set((state) => ({ cart: [...state.cart, item] })),
-    removeFromCart: (id: number) =>
-      set((state) => ({ cart: state.cart.filter((item) => item.id !== id) })),
+    addToCart: (item: Item) => {
+      set((state) => ({
+        cart: [...state.cart, item],
+        availableItems: state.availableItems.filter((i) => i.id !== item.id),
+      }));
+    },
+
+    removeFromCart: (id: number) => {
+      set((state) => {
+        const itemToRemove = (state.cart || []).find((item) => item.id === id);
+
+        if (itemToRemove) {
+          return {
+            cart: state.cart.filter((item) => item.id !== id),
+            availableItems: [...state.availableItems, itemToRemove],
+          };
+        }
+
+        return state;
+      });
+    },
   };
 });

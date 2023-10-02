@@ -10,8 +10,8 @@ export const Total = () => {
   }).format(sum);
 
   return (
-    <div className="w-full bg-red-600 flex flex-col items-center justify-center p-4">
-      <h3 className="text-2xl font-bold px-4 py-2 mt-4 text-white bg-blue-600 rounded-md">
+    <div className="w-full flex flex-col items-center justify-center p-4 border-b-2 border-gray-200">
+      <h3 className="text-2xl font-bold px-4 py-2 mt-4 text-white">
         Total price of cart {formattedSum}
       </h3>
     </div>
