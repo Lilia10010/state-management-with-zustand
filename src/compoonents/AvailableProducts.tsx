@@ -13,13 +13,13 @@ export const AvailableProducts = () => {
       {items.map((item) => (
         <div
           key={item.id}
-          className="flex gap-4 items-center justify-start p-4"
+          className="flex gap-4 items-center justify-between md:justify-start p-4"
         >
-          <span className="">{item.name}</span>
-          <span className="">{formatPrice(item.price)}</span>
+          <span className="text-orange-500 font-semibold">{item.name}</span>
+          <span className="text-orange-600">{formatPrice(item.price)}</span>
           <button
             onClick={() => addToCart(item)}
-            className="border border-1 border-gray-200 p-2 text-primary-300 rounded-md"
+            className="border border-1 border-green-600 hover:text-green-600 p-2 text-primary-300 rounded-md transition-colors duration-300 ease-in-out"
           >
             Add to cart
           </button>

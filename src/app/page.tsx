@@ -14,7 +14,7 @@ export default function Home() {
               State management with zustand
             </h3>
           </div>
-          <div className="flex gap-4">
+          <div className="flex flex-col md:flex-row gap-4">
             <div className="grow">
               <AvailableProducts />
             </div>
